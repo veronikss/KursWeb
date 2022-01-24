@@ -1,0 +1,108 @@
+﻿.top {
+    font-size: 28px;
+    background-color: #e6f2ff;
+    text-align: center;
+}
+
+    .top a {
+        text-decoration: none;
+        color: #003366;
+    }
+
+div.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: #3A3A3A;
+}
+
+    .nav a {
+        float: left;
+        color: #7CB6E5;
+        text-align: center;
+        padding: 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+        .nav a:hover {
+            background-color: #e6f2ff;
+            color: #003366;
+        }
+
+        .nav a.active {
+            background-color: #7CB6E5;
+            color: white;
+        }
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    color: #003366;
+    padding: 16px;
+}
+
+.login {
+    margin: auto;
+    width: 50%;
+}
+
+button {
+    width: 30%;
+}
+
+/*Kontakt send knappen*/
+input[type=submit] {
+    background-color: #003366;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #001f3d;
+    }
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.footer {
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+/*    border-radius: 5px;
+    background-color: #ffffff;*/
+}
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+          width: 100%;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .body {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin: 0px;
+        margin-left: 25px;
+        width: 100%;
+        text-align: center;
+    }
+}
