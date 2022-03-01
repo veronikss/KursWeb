@@ -1,4 +1,8 @@
-﻿.top {
+﻿* {
+    box-sizing: border-box;
+}
+
+.top {
     font-size: 28px;
     background-color: #e6f2ff;
     text-align: center;
@@ -39,14 +43,41 @@ div.sticky {
             color: white;
         }
 
+
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
+/*for default- og min side-layout*/
+.contentleft {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 15px;
+}
+
+.maincontent {
+    float: left;
+    width: 60%;
+    color: #003366;
+    padding: 30px;
+}
+
+.contentright {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+
 .container {
     color: #003366;
-    padding: 16px;
+    padding: 30px;
 }
 
 .login {
@@ -54,44 +85,9 @@ body {
     width: 50%;
 }
 
-button {
-    width: 30%;
-}
-
-/*Kontakt send knappen*/
-input[type=submit] {
-    background-color: #003366;
-    color: white;
-    padding: 11px 20px;
-    border: none;
-    cursor: pointer;
-}
-
-    input[type=submit]:hover {
-        background-color: #001f3d;
-    }
-
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
 .footer {
     padding: 10px 0px 0px 0px;
     text-align: center;
-/*    border-radius: 5px;
-    background-color: #ffffff;*/
-}
-
-@media screen and (max-width: 600px) {
-    .column, input[type=submit] {
-          width: 100%;
-        margin: 0px;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -104,5 +100,32 @@ input[type=text], select, textarea {
         margin-left: 25px;
         width: 100%;
         text-align: center;
+        
     }
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.quiz{
+    width: 60%;
+    margin: auto;
+}
+

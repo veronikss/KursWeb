@@ -15,40 +15,56 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-		<div class="top">
-			<a href="Default.aspx">Databasemodellering</a>
-		</div>
+	<form runat="server" style="border:1px solid #ccc">
 
-		<div class="sticky">
-			<div class="nav">
-				<a href="Default.aspx">Om kurset</a>
-				<a href="Pml.aspx">Påmelding</a>
-				<a class="active" href="Contact.aspx">Kontakt</a>
 
-				<div style="float:right">
-					<a href="https://www.instagram.com/veronika_suniaieva/"><i class='fab fa-instagram'></i></a>
-					<a href="mailto:veronikasunyaeva@gmail.com"><i class="far fa-envelope"></i></a>
-				</div>
+	<div class="top">
+	<a href="Default.aspx">Kurs i Microsoft SQL Server Management Studio</a>
+	</div>
+
+	<div class="sticky">
+		<div class="nav">
+			<a href="Default.aspx">Om kurset</a>
+			<a href="Pml.aspx">Påmelding</a>
+			<a class="active" href="Contact.aspx">Kontakt</a>
+			<a href="MyPage.aspx">Min side</a>
+			<a href="Quiz.aspx">Quiz</a>
+
+			<div style="float:right">
+                <a href="Login.aspx"><asp:LoginStatus ID="LoginStatus1" runat="server" /></a>
+				<a href="https://www.instagram.com/veronika_suniaieva/"><i class='fab fa-instagram'></i></a>
+				<a href="mailto:veronikasunyaeva@gmail.com"><i class="far fa-envelope"></i></a>
 			</div>
 		</div>
+	</div>
 
 		<div class="container">
-		<h1 style="font-size: 32px;">Kontakt</h1>
-		<p style= "font-size: 24px;">Skriv inn en melding til lederen av kurset her:</p>
 
-			<label for="fname">Brukernavn</label>
-			<input type="text" id="fname" runat="server" name="firstname" placeholder="Skriv inn din brukernavn.."/>
+			<div class="login">
+
+				<h1 style="font-size: 32px;">Kontakt</h1>
+				<p style= "font-size: 24px;">Skriv inn en melding til lederen av kurset her:</p>
+
+				<asp:Label ID="LabelMldBruker" runat="server" Text="Brukernavn"></asp:Label>
+				<td><asp:TextBox ID="TextBoxMldBruker" runat="server"></asp:TextBox>
+				<ASP:RequiredFieldValidator ControlToValidate="TextBoxMldBruker"
+                        Display="Static" ErrorMessage="*" runat="server" 
+                        ID="vUserMsg" /></td>
 			
-			<label for="message">Melding</label>
-			<textarea id="subject" name="subject" placeholder="Skriv inn det du lurer på.." style="height:100px"></textarea>
-			<input type="submit" value="Send"/>
+				<asp:Label ID="LabelMld" runat="server" Text="Melding"></asp:Label>
+				<textarea id="subject" name="subject" placeholder="Skriv inn det du lurer på.." style="height:100px"></textarea> <%--lage en kobling til contact form--%>
+					<asp:Button ID="ButtonMld" runat="server" CssClass="button" Text="Send" Width="88px" OnClick="ButtonMld_Click" />
+
 			</div>
 
-
-
-		<div class="footer"> 
-			<a style="color: #003366;font-size: 20px;" href="https://www.instagram.com/veronika_suniaieva/"><i class='fab fa-instagram'></i></a>
-			<a style="color: #003366;font-size: 20px;" href="mailto:veronikasunyaeva@gmail.com"><i class="far fa-envelope"></i></a>
 		</div>
+
+	</form>
+
+	<div class="footer"> 
+		<a style="color: #003366;font-size: 20px;" href="https://www.instagram.com/veronika_suniaieva/"><i class='fab fa-instagram'></i></a>
+		<a style="color: #003366;font-size: 20px;" href="mailto:veronikasunyaeva@gmail.com"><i class="far fa-envelope"></i></a>
+	</div>
+
 </body>
 </html>

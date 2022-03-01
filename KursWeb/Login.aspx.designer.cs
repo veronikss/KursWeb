@@ -11,8 +11,17 @@ namespace KursWeb
 {
 
 
-    public partial class Contact
+    public partial class Login
     {
+
+        /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// LoginStatus1 control.
@@ -24,31 +33,13 @@ namespace KursWeb
         protected global::System.Web.UI.WebControls.LoginStatus LoginStatus1;
 
         /// <summary>
-        /// LabelConf control.
+        /// TextBoxEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelConf;
-
-        /// <summary>
-        /// PanelReg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel PanelReg;
-
-        /// <summary>
-        /// TextBoxRegEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxRegEmail;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxEmail;
 
         /// <summary>
         /// vUserName control.
@@ -60,13 +51,13 @@ namespace KursWeb
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vUserName;
 
         /// <summary>
-        /// TextBoxPassord control.
+        /// TextBoxPsw control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPassord;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPsw;
 
         /// <summary>
         /// vUserPass control.
@@ -78,39 +69,30 @@ namespace KursWeb
         protected global::System.Web.UI.WebControls.RequiredFieldValidator vUserPass;
 
         /// <summary>
-        /// TextBoxRepPsw control.
+        /// chkPersistCookie control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxRepPsw;
+        protected global::System.Web.UI.WebControls.CheckBox chkPersistCookie;
 
         /// <summary>
-        /// vUserPassRep control.
+        /// ButtonLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator vUserPassRep;
+        protected global::System.Web.UI.WebControls.Button ButtonLogin;
 
         /// <summary>
-        /// CheckBoxReg control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBoxReg;
-
-        /// <summary>
-        /// ButtonReg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonReg;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }

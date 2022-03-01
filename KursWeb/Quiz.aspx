@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="KursWeb.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Quiz.aspx.cs" Inherits="KursWeb.Quiz" %>
 
 <!DOCTYPE html>
 
@@ -10,25 +10,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
 
-	<title>Databasemodellering</title>
+	<title>Quiz</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-	<form runat="server" style="border:1px solid #ccc">
+    <form runat="server" action="/action_page.php" style="border:1px solid #ccc">
 
 
 	<div class="top">
-		<a href="Default.aspx">Kurs i Microsoft SQL Server Management Studio</a>
+	<a href="Default.aspx">Kurs i Microsoft SQL Server Management Studio</a>
 	</div>
 
 	<div class="sticky">
 		<div class="nav">
-			<a class="active" href="Default.aspx">Om kurset</a>
+			<a href="Default.aspx">Om kurset</a>
 			<a href="Pml.aspx">Påmelding</a>
 			<a href="Contact.aspx">Kontakt</a>
 			<a href="MyPage.aspx">Min side</a>
-			<a href="Quiz.aspx">Quiz</a>
+			<a class="active" href="Quiz.aspx">Quiz</a>
 
 			<div style="float:right">
                 <a href="Login.aspx"><asp:LoginStatus ID="LoginStatus1" runat="server" /></a>
@@ -38,27 +38,51 @@
 		</div>
 	</div>
 
-		<div style="overflow:auto">
 
-			<div class="contentleft">
-				<p>Annonse</p>
-			</div>
+		<div class="container">
 
+			<h1>Quiz</h1>
 
-			<div class="maincontent">
-				<h1 style="font-size: 30px">MS SQL Server</h1>
-				<p style= "font-size: 26px">Om du påmelder deg på dette kurset får du informasjon om konfigurering av SQL, innledning og alt du trenger for å starte med MS SQL Management Studio.</p>
-				<p style= "font-size: 26px">Du kan også kontakte kursledere via e-post, Instagram eller skrive en melding på nettsiden vår.</p>
+			<b>Q1?..</b>
 
-			</div>
+				<asp:RadioButtonList ID="q1" runat="server">
+				<asp:ListItem Text="En table-modell" Value="1" />
+				<asp:ListItem Text="noeths sts" Value="2" />
+				<asp:ListItem Text="th tht hs" Value="3" />
 
-			<div class="contentright">
-				<p>Annonse</p>
-			</div>
+				</asp:RadioButtonList>
+				<br />
+
+			<b>Q2?..</b>
+				
+				<asp:RadioButtonList ID="q2" runat="server">
+				<asp:ListItem Text="bths syt" Value="1" />
+				<asp:ListItem Text="eray 5 ey" Value="2" />
+				<asp:ListItem Text="awe4rt4 ae" Value="3" />
+
+				</asp:RadioButtonList>
+				<br />
+
+			<b>Q3?..</b>
+				
+				<asp:RadioButtonList ID="q3" runat="server">
+				<asp:ListItem Text="rzsde rtr" Value="1" />
+				<asp:ListItem Text="ew rt" Value="2" />
+				<asp:ListItem Text="atre ert" Value="3" />
+
+				</asp:RadioButtonList>
+				<br />
+			<asp:Button ID="Button1" runat="server" Text="Button" OnClick ="calc" />
+			<br />
+			<br />
+			<asp:Panel ID="Panel1" BorderWidth="3" GroupingText ="Result" runat="server">
+
+				<asp:Label ID="rs" runat="server"></asp:Label>
+			</asp:Panel>
 
 		</div>
 
-	</form>
+    </form>
 
 	<div class="footer"> 
 		<a style="color: #003366;font-size: 20px;" href="https://www.instagram.com/veronika_suniaieva/"><i class='fab fa-instagram'></i></a>
